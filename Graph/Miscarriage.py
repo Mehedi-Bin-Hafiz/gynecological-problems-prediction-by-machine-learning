@@ -44,6 +44,7 @@ df = pd.DataFrame({'Iron Deficiency': misIron,
                    'Excess Menstrual Bleeding':misBleeding,
                    'Frequent Pregnancy': misFre}, index=index)
 ax = df.plot.bar(rot=0)
+plt.ylabel('Numbers')
 plt.savefig('miscarriageBar.png')
 plt.show()
 
@@ -63,6 +64,7 @@ df = pd.DataFrame({'Iron Deficiency': misIron,
                    'Excess Menstrual Bleeding':misBleeding,
                    'Frequent Pregnancy': misFre}, index=index)
 df.plot.bar(rot=0)
+plt.ylabel('Numbers')
 plt.savefig('anemiaBar.png')
 plt.show()
 

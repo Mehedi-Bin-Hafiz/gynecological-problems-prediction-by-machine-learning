@@ -15,7 +15,7 @@ from sklearn.metrics import confusion_matrix
 checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')
 
 
-real = checkValidationDataSet['Pneumonia'].values
+real = checkValidationDataSet['Disease'].values
 predicted = checkValidationDataSet['Prediction'].values
 
 

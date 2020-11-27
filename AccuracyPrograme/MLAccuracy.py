@@ -13,7 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 #database
 MainDatabase = pd.read_excel("../database/MainDataset.xlsx")
 # base on database we will set iloc
-x = MainDatabase.iloc[:, :7].values  #independent variables
+x = MainDatabase.iloc[:, :5].values  #independent variables
 print(x)
 y = MainDatabase.iloc[ : , -1].values #dependent variables
 print(y)

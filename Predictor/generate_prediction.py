@@ -14,13 +14,13 @@ from sklearn.ensemble import RandomForestClassifier
 #database
 MainDatabase = pd.read_excel(r'../database/MainDataset.xlsx')
 # base on database we will set iloc
-x = MainDatabase.iloc[:, :7].values  #independent variables
+x = MainDatabase.iloc[:, :5].values  #independent variables
 y = MainDatabase.iloc[ : , -1].values #dependent variables
 print(y)
 
 validationDataSet = pd.read_excel(r'../database/ValidationDataSet.xlsx')
 # base on database we will set iloc
-vX = validationDataSet.iloc[:, :7].values  #independent variables
+vX = validationDataSet.iloc[:, :5].values  #independent variables
 vY = validationDataSet.iloc[ : , -1].values #dependent variables
 
 
@@ -33,7 +33,7 @@ y_pred=clf.predict(vX)
 print(len(y_pred))
 
 validationDataSet.to_excel(r'../database/predictedDataSet.xlsx', index=False)
-validationDataSet.insert(8,"Prediction",y_pred,True)
+validationDataSet.insert(6,"Prediction",y_pred,True)
 validationDataSet.to_excel(r'../database/predictedDataSet.xlsx', index=False)
 
 checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')

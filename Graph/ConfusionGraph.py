@@ -11,8 +11,9 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
-plt.rcParams.update({'font.size': 12})
 plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams["figure.figsize"] = [9,5]
+plt.rcParams.update({'font.size': 12})
 
 checkValidationDataSet = pd.read_excel(r'../database/predictedDataSet.xlsx')
 real = checkValidationDataSet['Disease'].values

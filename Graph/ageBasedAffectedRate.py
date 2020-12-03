@@ -6,9 +6,9 @@ import seaborn as sns
 import numpy as np
 
 ########### vvi code for paper#########
-plt.rcParams.update({'font.size': 10})
 plt.rcParams["font.family"] = "Times New Roman"
-plt.figure(figsize = (10,9))
+plt.rcParams["figure.figsize"] = [9,5]
+plt.rcParams.update({'font.size': 12})
 ########### vvi code for paper#########
 mainDataset = pd.read_excel(r'../database/MainDataset.xlsx')
 
@@ -47,12 +47,13 @@ age3 = [age3_disease1,age3_disease2]
 
 # Create the pandas DataFrame
 index = ['Miscarriage', 'Anemia']
-df = pd.DataFrame({'15-19': age1,
-                   '20-30': age2,
-                   '30 up':age3,}, index=index)
+df = pd.DataFrame({'14-19': age1,
+                   '20-35': age2,
+                   '35 up':age3,}, index=index)
 df.plot.bar(rot=0)
-plt.savefig('disease vs age.png')
 plt.ylabel('Numbers')
+plt.xlabel('Diseases')
+plt.savefig('disease vs age.png')
 plt.show()
 
 

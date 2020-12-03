@@ -2,8 +2,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 ########### vvi code for paper#########
-plt.rcParams.update({'font.size': 8})
 plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams["figure.figsize"] = [9,5]
+plt.rcParams.update({'font.size': 12})
 ########### vvi code for paper#########
 
 mainDataset = pd.read_excel(r'../database/MainDataset.xlsx')
